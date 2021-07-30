@@ -1,6 +1,6 @@
 <template>
     <b-modal v-model="is_active" 
-        :width="570"
+        :width="538"
         aria-role="dialog"
         aria-modal
         :destroy-on-hide="false"
@@ -62,7 +62,7 @@
         <template v-else>
             <div class="card">
                 <div class="card-image">
-                    <b-skeleton height="220" animated></b-skeleton>
+                    <b-skeleton width="500" height="220" animated></b-skeleton>
                 </div>
                 <div class="card-content">
                     <div class="content">

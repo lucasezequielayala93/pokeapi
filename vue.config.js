@@ -1,8 +1,11 @@
+const path = require('path');
 module.exports = {
   pluginOptions: {
     "style-resources-loader": {
       preProcessor: "scss",
-      patterns: ["C:\\host\\pokeapi\\src\\style\\*.scss"],
+      patterns: [
+        path.resolve(__dirname, "src/style/*.scss")
+      ],
     },
   },
 };
