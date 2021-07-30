@@ -1,0 +1,99 @@
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+// Set your colors
+$primary: #8c67ef;
+$dark: #353535;
+$grey: #5E5E5E;
+$grey-light: #BFBFBF;
+$warning: #ECA539;
+$danger: #F22539;
+$danger-dark: #C00E20;
+$primary-light: findLightColor($primary);
+$primary-dark: findDarkColor($primary);
+$primary-invert: findColorInvert($primary);
+$twitter: #4099FF;
+$twitter-invert: findColorInvert($twitter);
+
+// Lists and maps
+$custom-colors: null !default;
+$custom-shades: null !default;
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: mergeColorMaps(
+    (
+        "white": (
+            $white,
+            $black,
+        ),
+        "black": (
+            $black,
+            $white,
+        ),
+        "light": (
+            $light,
+            $light-invert,
+        ),
+        "dark": (
+            $dark,
+            $dark-invert,
+        ),
+        "primary": (
+            $primary,
+            $primary-invert,
+            $primary-light,
+            $primary-dark,
+        ),
+        "link": (
+            $link,
+            $link-invert,
+            $link-light,
+            $link-dark,
+        ),
+        "info": (
+            $info,
+            $info-invert,
+            $info-light,
+            $info-dark,
+        ),
+        "success": (
+            $success,
+            $success-invert,
+            $success-light,
+            $success-dark,
+        ),
+        "warning": (
+            $warning,
+            $warning-invert,
+            $warning-light,
+            $warning-dark,
+        ),
+        "danger": (
+            $danger,
+            $danger-invert,
+            $danger-light,
+            $danger-dark,
+        ),
+    ),
+    $custom-colors
+);
+
+$ghost: $white;
+$danger-hover: $danger-dark;
+$button-disabled-background: #BFBFBF;
+
+$input-border-color: $white;
+$input-hover-border-color: transparent;
+$input-shadow: 0px 2px 10px rgb(0 0 0 / 4%);
+$input-radius: 5px;
+$input-focus-border-color: $white;
+$input-focus-box-shadow-size: 0;
+
+$family-sans-serif: "Lato";
+$family-primary: $family-sans-serif;
+$body-family: $family-primary;
+$font-size: "1rem";
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
