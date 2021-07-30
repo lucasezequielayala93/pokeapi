@@ -58,6 +58,7 @@
             opacity: 1;
         }
     }
+    
     @media (max-width: 700px) {
         .button {
             width: 200px;
