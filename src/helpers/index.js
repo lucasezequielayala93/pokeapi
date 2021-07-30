@@ -9,3 +9,13 @@ export const alertFailed = (message) => {
         hasIcon: false
     })
 }
+
+export const alertInfo = (message) => {
+    Notification.open({
+        duration: 3000,
+        message,
+        type: 'is-dark',
+        position: 'is-bottom-right',
+        hasIcon: false
+    })
+}

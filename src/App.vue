@@ -37,5 +37,7 @@ p{
 .modal .animation-content{
   padding: 0 1rem;
 }
-
+.notifications{
+  z-index: 99;
+}
 </style>

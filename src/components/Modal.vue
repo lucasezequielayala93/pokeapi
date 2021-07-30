@@ -43,7 +43,8 @@
                     <div class="card-footer-item">
                         <b-button type="is-danger"
                             rounded
-                            v-clipboard:copy="copyClipboard()">
+                            v-clipboard:copy="copyClipboard()"
+                            @click="successClipboard()">
                             Share to my friends
                         </b-button>
                         <button class="button is-light"
@@ -85,7 +86,7 @@
 </template>
 
 <script>
-    import {alertFailed} from "@/helpers";
+    import {alertFailed, alertInfo} from "@/helpers";
     export default {
         name: 'Modal',
         data(){
@@ -133,6 +134,9 @@
             },
             copyClipboard(){
                 return `${this.name}, weight: ${this.weight}, height: ${this.height}, types: ${this.types}`;
+            },
+            successClipboard(){
+                alertInfo('Copied to clipboard');
             }
         },
         created(){
@@ -146,6 +150,7 @@
 
 <style lang="scss" scoped>
     .card-image{
+        width: 500px;
         figure{
             position: absolute;
             top: 0;

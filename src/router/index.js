@@ -23,6 +23,11 @@ const routes = [
       },
     ]
   },
+  {
+    path: "*",
+    name: "NotFound",
+    component: List
+  }
 ];
 
 const router = new VueRouter({
