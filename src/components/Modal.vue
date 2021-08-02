@@ -150,7 +150,6 @@
 
 <style lang="scss" scoped>
     .card-image{
-        width: 500px;
         figure{
             position: absolute;
             top: 0;
